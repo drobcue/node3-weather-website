@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location!', undefined);
         } else{
             callback(undefined, body.current.weather_descriptions[0] + '. It\'s currently ' + body.current.temperature + ' degree out. It feels like ' + 
-                body.current.feelslike + ' degree out.');
+                body.current.feelslike + ' degree out. The wind direction is from ' + body.current.wind_dir + ' with a speed of ' + body.current.wind_speed + '.');
         }                
     });
 };
